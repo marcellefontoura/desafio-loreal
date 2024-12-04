@@ -1,4 +1,4 @@
-CSS * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,8 +9,17 @@ body {
 }
 
 header .background {
-  width: 100%;
+  width: 100vw;
   display: flex;
+}
+
+nav {
+  background-color: #EFEEF3;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  padding: 10px;
+  align-items: center;
 }
 
 ul {
@@ -18,66 +27,100 @@ ul {
   list-style: none;
   align-items: center;
   font-family: "Kodchasan", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
+}
+ul li {
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   margin-left: 15px;
   margin-right: 15px;
-  padding-bottom: 5px;
-  padding: 10px;
-  cursor: pointer;
+}
+ul li a {
+  color: black;
+  text-decoration: none;
 }
 
 .primeiraSessao {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 18%;
-  padding-top: 5%;
-  padding-bottom: 2%;
+  justify-content: center;
+  padding-top: 8%;
+  padding: 5%;
+}
+.primeiraSessao .texto1 {
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
   font-family: "Kodchasan", sans-serif;
   font-weight: 400;
 }
-.primeiraSessao img {
-  padding-bottom: 5%;
-}
-.primeiraSessao h1 {
-  text-align: center;
+.primeiraSessao .texto1 h1 {
   font-size: 1.5rem;
+  text-align: center;
   font-family: "Kodchasan", sans-serif;
   font-weight: 600;
-}
-.primeiraSessao p {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 20vh;
-  width: 30vw;
-  margin: 0 10%;
 }
 
 .segundaSessao {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 5%;
   gap: 20px;
 }
-.segundaSessao h2 {
-  text-align: center;
-  line-height: 39px;
-  padding-left: 60px;
-  align-items: center;
-  font-size: 1.5rem;
+
+h2 {
   font-family: "Kodchasan", sans-serif;
   font-weight: 400;
+  font-size: 1.87rem;
+  line-height: 39px;
+  text-align: center;
+  align-items: center;
 }
 
-@media (max-width: 750px) {
+.produtos1 {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  align-items: center;
+}
+
+@media (max-width: 1163px) {
   header .background {
-    display: flex;
-    justify-content: space-around;
+    display: none;
+  }
+  nav {
     flex-direction: column;
+    align-items: center;
+  }
+  ul {
+    flex-direction: column;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+  }
+  li {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+}
+@media (max-width: 900px) {
+  .primeiraSessao {
+    flex-direction: column;
+    align-items: center;
+  }
+  .texto1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .segundaSessao {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
